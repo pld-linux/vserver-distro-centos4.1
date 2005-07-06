@@ -9,6 +9,7 @@ Source0:	%{name}.tar.gz
 # Source0-md5:	47e4ea8f73434e6800562d7bb6c67302
 URL:		http://linux-vserver.org/CentOS_HowTo
 Requires:	util-vserver
+Requires: yum
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
