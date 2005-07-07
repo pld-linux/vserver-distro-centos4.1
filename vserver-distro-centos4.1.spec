@@ -1,5 +1,5 @@
-#
 Summary:	VServer build template for CentOS 4.1
+Summary(pl):	Szablon budowania VServera dla CentOS 4.1
 Name:		vserver-distro-centos4.1
 Version:	1
 Release:	1
@@ -8,23 +8,26 @@ Group:		Applications/System
 Source0:	%{name}.tar.gz
 # Source0-md5:	47e4ea8f73434e6800562d7bb6c67302
 URL:		http://linux-vserver.org/CentOS_HowTo
+BuildRequires:	rpmbuild(macros) >= 1.213
 Requires:	util-vserver
-Requires: yum
+Requires:	yum
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 VServer build template for CentOS 4.1.
 
-%prep
+%description -l pl
+Szablon budowania VServera dla CentOS 4.1.
 
-%build
+%prep
 
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT
+
 cd $RPM_BUILD_ROOT
 tar xzf %{SOURCE0}
-%ifarch amd64 sparc64
+%ifarch %{x8664} sparc64
 mv usr/lib usr/lib64
 %endif
 
