@@ -27,8 +27,8 @@ install -d $RPM_BUILD_ROOT
 
 cd $RPM_BUILD_ROOT
 tar xzf %{SOURCE0}
-%ifarch %{x8664} sparc64
-mv usr/lib usr/lib64
+%if "%{_lib}" != "lib"
+mv usr/lib usr/%{_lib}
 %endif
 
 %clean
