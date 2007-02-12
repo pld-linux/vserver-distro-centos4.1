@@ -1,5 +1,5 @@
 Summary:	VServer build template for CentOS 4.1
-Summary(pl):	Szablon budowania VServera dla CentOS 4.1
+Summary(pl.UTF-8):   Szablon budowania VServera dla CentOS 4.1
 Name:		vserver-distro-centos4.1
 Version:	1
 Release:	1
@@ -16,7 +16,7 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 VServer build template for CentOS 4.1.
 
-%description -l pl
+%description -l pl.UTF-8
 Szablon budowania VServera dla CentOS 4.1.
 
 %prep
